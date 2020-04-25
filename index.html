@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="stylee.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <header class="section">
+            <h1>Greetings, welcome here</h1>
+            <h1>I am Shahad AlMansour</h1>
+        </header>
+        <section class="section">
+            <header id="header">
+                <h2>About</h2>
+            </header>
+            <article id="article">
+                <p>This page is to share your interests with me, yey!</p>
+            </article>
+        </section>
+        <section class="section">
+            <header id="header">
+                <h2>Interests</h2>
+            </header>
+            <article id="article">
+                <p>I'm intrested in Frontend desiging, Physics, Machine Learning, and Algorithms.</p>
+            </article>
+        </section>
+        <section class="section">
+            <header id="header">
+                <h2>Form</h2>
+            </header>
+            <article id="article">
+                <p>Please, fill in the following form:</p>
+            </article>
+            <div class="elementinput">
+                <form action="cv.html">
+                    <label for="name">Full name:</label>
+                    <br>
+                    <input type="text" id="name" name="name">
+                    <br>
+                    <br>
+                    <label for="interests">Interests:</label>
+                    <br>
+                    <input type="checkbox" id="1" name="1" value="Frontend desiging">
+                    <label for="1">Frontend desiging</label><br>
+                    <input type="checkbox" id="2" name="2" value="Physics">
+                    <label for="2">Physics</label><br>
+                    <input type="checkbox" id="3" name="3" value="Machine Learning">
+                    <label for="3">Machine Learning</label><br>
+                    <input type="checkbox" id="4" name="4" value="Algorithms">
+                    <label for="4">Algorithms</label><br>
+                    <br>
+                    <input type="submit" id="btn" value="Submit" onclick="storeValues();">
+                </form>
+                <button onclick="Meme();" id="btnin">Submit, display Meme page</button>
+                <section class="section">
+                </section>
+            </div>
+        </section>
+        <footer class="section">
+            <h1>End of Page</h1>
+        </footer>
+    </div>
+
+    <script>
+        const checkboxes = document.querySelectorAll('input[type=checkbox]');
+
+        function storeValues() {
+            if ('localStorage' in window && window['localStorage'] !== null) {
+                const name = document.querySelector('#name').value;
+
+                localStorage.setItem('name', name);
+                for (i = 0; i < checkboxes.length; i++) {
+                    localStorage.setItem(checkboxes[i].value, checkboxes[i].checked);
+                }
+
+            } else {
+                alert('Cannot store user preferences as your browser do not support local storage');
+            }
+
+            //if radio button is seleceted "meme" go to meme page
+            //if radio button is selected "CV" go to CV page
+            //but it did not work so I plsced two submit buttons and removed the radio buttons
+            //if (liketosee = "meme") {
+            //    window.location.replace("http://127.0.0.1:5500/meme.html");
+            //} else if (liketosee = "cv") {
+            //    window.location.replace("http://127.0.0.1:5500/cv.html");
+            //}
+        }
+
+        const submitBtn = document.querySelector('#btn');
+        submitBtn.addEventListener('click', storeValues);
+
+        function Meme() {
+            location.replace("http://127.0.0.1:5500/meme.html")
+        }
+    </script>
+
+</body>
+
+</html>

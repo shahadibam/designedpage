@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 50px;
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(248, 248, 248);
+    text-align: left;
+    border-radius: 10px;
+}
+
+.section {
+    margin: 2px;
+    padding: 12px;
+}
+
+.table {
+    margin: 2px;
+    border-collapse: collapse;
+}
+
+.table th, td {
+    border: 1px solid black;
+    margin: 2px;
+    padding: 3px;
+}
+
+.section img {
+    border: 0.5px;
+    border-radius: 20px;
+}
+
+.section #header {
+    margin: 2px;
+    padding: 2px;
+    font-size: 14px;
+    text-decoration-line: underline;
+    font-style: italic;
+}
+
+.section #article {
+    margin: 8px;
+    padding: 2px;
+    font-size: 16px;
+}
+
+.section .elementinput {
+    margin: 8px;
+    padding: 6px;
+}
+
+.section #btn {
+    margin: 1px;
+    padding: 3px;
+
+    padding: 4px;
+    margin: 4px;
+    text-align: left;
+    padding: 8px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border-radius: 8px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+}
+
+.section #btncv {
+    margin: 1px;
+    padding: 3px;
+
+    padding: 4px;
+    margin: 4px;
+    text-align: left;
+    padding: 8px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border-radius: 8px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+}
+.section #btnin {
+    margin: 1px;
+    padding: 3px;
+
+    padding: 4px;
+    margin: 4px;
+    text-align: left;
+    padding: 8px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border-radius: 8px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+}
+
+footer h1 {
+    font-size: 15px;
+}

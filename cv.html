@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>interests Page</title>
+    <link rel="stylesheet" href="stylee.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <header class="section">
+            <h1>Hello, <span id="spanid"></span></h1>
+            <!--user input name-->
+        </header>
+        <section class="section">
+            <article id="article">
+                <p id="pid1">Our interests match
+                    <!--percent of matched--><span id="spanid2"></span>%
+                </p>
+                <p id="pid2">I am also interested in
+                    <!--values matched--><span id="spanid3"></span>
+                </p>
+            </article>
+        </section>
+        <section class="section">
+            <button onclick="myCV();" id="btncv">Check CV</button>
+        </section>
+    </div>
+
+    <script>
+        function getUserData() {
+            if ('localStorage' in window && window['localStorage'] !== null) {
+                const name = localStorage.getItem('name');
+ 
+                //user input name
+                var node = document.createElement("span");
+                node.innerHTML = name;
+                document.getElementById("spanid").appendChild(node);
+
+                //user checkbox
+                var nodecheck;
+
+            } else {
+                alert('Cannot store user preferences as your browser do not support local storage');
+            }
+        }
+        getUserData();
+
+        function myCV() {
+            location.replace("http://127.0.0.1:5500/cvdirect.html");
+        }    
+    </script>
+
+</body>
+
+</html>
